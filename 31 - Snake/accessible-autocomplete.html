@@ -1,0 +1,24 @@
+<form action="#">
+	<label for="search">Search towns in Australia</label>
+	<input id="search"
+		type="text"
+		aria-describedby="instructions"
+		aria-owns="results"
+		aria-expanded="false">
+	<!-- use type="text" instead of type="search" because of inconsistent behaviour on browsers and inaccessible clearbutton on safari-->
+	<button type="button" aria-label="Clear"></button>
+	<button type="submit" aria-label="Search"></button>
+	<ul id="results"
+		role="listbox"
+		tabindex="-1"
+		style="display: none;">
+		<li role="option" aria-selected="false">Apple</li>
+		<li role="option" aria-selected="false">Banana</li>
+		<li role="option" aria-selected="false">Pear</li>
+	</ul>
+	<div id="instuctions"
+		aria-live="assertive"
+		class="visually-hidden">
+		When autocomplete options are available, use up and down arrows to review and enter to select.
+	</div>
+</form>
